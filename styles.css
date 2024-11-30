@@ -141,6 +141,11 @@ footer {
 	width: 100%;
 }
 
+/* ----- RESPONSIVEVE MESSAGE UNTIL I CAN CODE DIFF SIZES ----- */
+	.responsiveMsg {
+		display: none;
+	}
+
 /* ----- SKIP LINK ----- */
 .skip-link {
 	position: absolute;
@@ -269,7 +274,7 @@ footer {
 }
 
 .activeWindow {
-	display: block;
+	display: grid;
 }
 
 .browserBar {
@@ -321,7 +326,6 @@ footer {
 	/* ----- HOME ----- */
 		/* ----- Welcome Tab ----- */
 		#welcomeWindow {
-			display: grid;
 			grid-template-columns: 1fr 1fr;
 			align-content: center;
 			height: 559px;
@@ -387,3 +391,27 @@ footer {
 /* ----- ADDITIONAL IDS ----- */
 
 /* ----- MEDIA QUERIES GO HERE; I'M GOING TO MAKE THIS RESPONSIVE AT A LATER TIME ----- */
+@media (max-width: 1120px) {
+	header, .fauxBrowser {
+		display: none;
+	}
+
+	.responsiveMsg {
+		display: block;
+	}
+
+	.responsiveMsg h3 {
+		font-family: var(--meow);
+		font-size: 65px;
+		text-align: center;
+	}
+
+	.responsiveMsg p {
+		font-family: var(--jbMono);
+		padding: 5px 20px;
+	}
+
+	.responsiveMsg a {
+		color: var(--blk);
+	}
+}
