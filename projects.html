@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Janessa Groves">
+        <meta name="description" content="Janessa Groves portfolio website">
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+        
+        <!-- THIS IS WHERE I WOULD INSERT OPEN GRAPH/SOCIAL MEDIA META TAGS -->
+        
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="icon" href="images/JG-favicon.png">
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Meow+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+       
+        <title>Janessa Groves' Portfolio</title>
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <header>
+            <h1 class="sr-only">Welcome to My Portfolio!</h1>
+            <nav class="mainNav">
+                <h2 class="sr-only">Main Navigation</h2>
+                <ul>
+                    <li><a href="/index.html">
+                        <img src="/images/desktop-home-jglogo.png" alt="JG responsive logo in black and white; depicts a cat in a box" class="desktopIcons"></img>
+                        <br><p>home</p>
+                    </a></li>
+                    <li><a href="/process.html">
+                        <img src="/images/desktop-process.png" alt="light blue hexagon-shaped icon with a white gear on it" class="desktopIcons"></img>
+                        <br><p>process</p>
+                    </a></li>
+                    <li><a href="/projects.html">
+                        <img src="/images/desktop-portfolio.png" alt="purple hexagon-shaped icon with a yellow folder on it" class="desktopIcons"></img>
+                        <br><p>projects</p>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="fauxBrowser">
+                
+                <div class="windowControls">
+                    <!-- minus - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" stroke-width="1.25">
+                        <path d="M5 12l14 0"></path>
+                    </svg>
+                    <!-- square - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" stroke-width="1.25">
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                    </svg>
+                    <!-- x - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" stroke-width="1.25">
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                    </svg>
+                </div>
+
+                <nav class="secondaryNav">
+                    <h2 class="sr-only">Secondary Navigation</h2>
+                    <ul class="tabs">
+                        <li id="activeTab">
+                            <!-- cards - svg from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M3.604 7.197l7.138 -3.109a.96 .96 0 0 1 1.27 .527l4.924 11.902a1 1 0 0 1 -.514 1.304l-7.137 3.109a.96 .96 0 0 1 -1.271 -.527l-4.924 -11.903a1 1 0 0 1 .514 -1.304z"></path>
+                                <path d="M15 4h1a1 1 0 0 1 1 1v3.5"></path>
+                                <path d="M20 6c.264 .112 .52 .217 .768 .315a1 1 0 0 1 .53 1.311l-2.298 5.374"></path>
+                            </svg>
+                            Unique Emporium
+                        </li>
+                        <li>
+                            <!-- poké ball - svg from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M3 12h6"></path>
+                                <path d="M15 12h6"></path>
+                            </svg>
+                            Poké Mart
+                        </li>
+                        <li>
+                            <!-- brain - svg icon from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"></path>
+                                <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"></path>
+                                <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"></path>
+                                <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"></path>
+                                <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"></path>
+                                <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"></path>
+                            </svg>
+                            Migraine App
+                        </li>
+                        <li>
+                            <!-- books - svg from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M5 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
+                                <path d="M9 4m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
+                                <path d="M5 8h4"></path>
+                                <path d="M9 16h4"></path>
+                                <path d="M13.803 4.56l2.184 -.53c.562 -.135 1.133 .19 1.282 .732l3.695 13.418a1.02 1.02 0 0 1 -.634 1.219l-.133 .041l-2.184 .53c-.562 .135 -1.133 -.19 -1.282 -.732l-3.695 -13.418a1.02 1.02 0 0 1 .634 -1.219l.133 -.041z"></path>
+                                <path d="M14 9l4 -1"></path>
+                                <path d="M16 16l3.923 -.98"></path>
+                            </svg>
+                            Barnes & Noble
+                        </li>
+                        <li>
+                            <!-- instagram logo - svg from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                <path d="M16.5 7.5l0 .01"></path>
+                            </svg>
+                            Social Change
+                        </li>
+                        <li class="addTab">
+                            <!-- plus/add - svg icon from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M12 5l0 14"></path>
+                                <path d="M5 12l14 0"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="browserBar">
+                    <!-- left arrow - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.25">
+                        <path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18"></path>
+                        <path d="M8 12l4 4"></path>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8l-4 4"></path>
+                      </svg>
+                    <!-- right arrow - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.25">
+                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18"></path>
+                        <path d="M16 12l-4 -4"></path>
+                        <path d="M16 12h-8"></path>
+                        <path d="M12 16l4 -4"></path>
+                    </svg>
+                    <!-- refresh - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.25">
+                        <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747"></path>
+                        <path d="M20 4v5h-5"></path>
+                    </svg>
+                    <div class="urlBar">
+                        <p id="activeURL">www.janessa.com/projects-UE.html</p>
+                        <p>www.janessa.com/projects-PM.html</p>
+                        <p>www.janessa.com/projects-MA.html</p>
+                        <p>www.janessa.com/projects-BN.html</p>
+                        <p>www.janessa.com/projects-CSD.html</p>
+                    </div>
+                    <div class="bookmarks">
+                        <a href="https://github.com/JGroves1" aria-label="Github profile"><img src="/images/bookmark-github.png" alt="Github favicon in blurple"></a>
+                        <a href="https://codepen.io/JGroves1" aria-label="CodePen profile"><img src="/images/bookmark-codepen.png" alt="CodePen favicon in black"></a>
+                        <a href="https://www.behance.net/janessagroves" aria-label="behance profile"><img src="/images/bookmark-behance.png" alt="Behance favicon in blue"></a>
+                        <a href="mailto:jgroves1@asu.edu" aria-label="email me"><img src="/images/bookmark-gmail.png" alt="Gmail favicon in brand colors"></a>
+                    </div>
+                </div>
+
+                <!-- begin UE tab -->
+                <div class="browserWindow activeWindow" id="UE-Window" >
+                    <h2 class="sr-only">Unique Emporium</h2>
+                    <!-- insert UE page here -->
+                </div>
+
+                <!-- begin Poké Mart tab -->
+                <div class="browserWindow" id="PM-Window">
+                    <h2 class="sr-only">Poké Mart</h2>
+                    <!-- insert PM page here -->
+                </div>
+
+                <!-- begin Migraine tab -->
+                <div class="browserWindow" id="MA-Window">
+                    <h2 class="sr-only">Migraine App</h2>
+                    <!-- insert Migraine App page here -->
+                </div>
+
+                <!-- begin B&N tab -->
+                <div class="browserWindow" id="BN-Window">
+                    <h2 class="sr-only">Barnes & Noble</h2>
+                    <!-- insert B&N page here -->
+                </div>
+
+                <!-- begin cancel student debt tab -->
+                <div class="browserWindow" id="CSD-Window">
+                    <h2 class="sr-only">Cancel Student Debt</h2>
+                    <!-- insert CSD page here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <small>Copyright &copy; 2024 // Janessa Groves</small>
+        </footer>
+    </body>
+</html>

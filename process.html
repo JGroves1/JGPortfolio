@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Janessa Groves">
+        <meta name="description" content="Janessa Groves portfolio website">
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+        
+        <!-- THIS IS WHERE I WOULD INSERT OPEN GRAPH/SOCIAL MEDIA META TAGS -->
+        
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="icon" href="images/JG-favicon.png">
+        <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Meow+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+       
+        <title>Janessa Groves' Portfolio</title>
+    </head>
+    <body>
+        <a href="#main" class="skip-link">Skip to Main Content</a>
+        <header>
+            <h1 class="sr-only">Welcome to My Portfolio!</h1>
+            <nav class="mainNav">
+                <h2 class="sr-only">Main Navigation</h2>
+                <ul>
+                    <li><a href="/index.html">
+                        <img src="/images/desktop-home-jglogo.png" alt="JG responsive logo in black and white; depicts a cat in a box" class="desktopIcons"></img>
+                        <br><p>home</p>
+                    </a></li>
+                    <li><a href="/process.html">
+                        <img src="/images/desktop-process.png" alt="light blue hexagon-shaped icon with a white gear on it" class="desktopIcons"></img>
+                        <br><p>process</p>
+                    </a></li>
+                    <li><a href="/projects.html">
+                        <img src="/images/desktop-portfolio.png" alt="purple hexagon-shaped icon with a yellow folder on it" class="desktopIcons"></img>
+                        <br><p>projects</p>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="fauxBrowser">
+                
+                <div class="windowControls">
+                    <!-- minus - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" stroke-width="1.25">
+                        <path d="M5 12l14 0"></path>
+                    </svg>
+                    <!-- square - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" stroke-width="1.25">
+                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                    </svg>
+                    <!-- x - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" stroke-width="1.25">
+                        <path d="M18 6l-12 12"></path>
+                        <path d="M6 6l12 12"></path>
+                    </svg>
+                </div>
+
+                <nav class="secondaryNav">
+                    <h2 class="sr-only">Secondary Navigation</h2>
+                    <ul class="tabs">
+                        <li id="activeTab">
+                            <!-- gear - svg icon from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
+                                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                            </svg>
+                            Process
+                        </li>
+                        <li>
+                            <!-- box - svg from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"></path>
+                                <path d="M12 12l8 -4.5"></path>
+                                <path d="M12 12l0 9"></path>
+                                <path d="M12 12l-8 -4.5"></path>
+                            </svg>
+                            FITS
+                        </li>
+                        <li>
+                            <!-- checkmark circle - svg from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                <path d="M9 12l2 2l4 -4"></path>
+                            </svg>
+                            SITS
+                        </li>
+                        <li class="addTab">
+                            <!-- plus/add - svg icon from tablericons.com -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" stroke-width="1.25">
+                                <path d="M12 5l0 14"></path>
+                                <path d="M5 12l14 0"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="browserBar">
+                    <!-- left arrow - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.25">
+                        <path d="M12 21a9 9 0 1 0 0 -18a9 9 0 0 0 0 18"></path>
+                        <path d="M8 12l4 4"></path>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8l-4 4"></path>
+                      </svg>
+                    <!-- right arrow - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.25">
+                        <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18"></path>
+                        <path d="M16 12l-4 -4"></path>
+                        <path d="M16 12h-8"></path>
+                        <path d="M12 16l4 -4"></path>
+                    </svg>
+                    <!-- refresh - svg icon from tablericons.com -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="1.25">
+                        <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747"></path>
+                        <path d="M20 4v5h-5"></path>
+                    </svg>
+                    <div class="urlBar">
+                        <p id="activeURL">www.janessa.com/process.html</p>
+                        <p>www.janessa.com/fits.html</p>
+                        <p>www.janessa.com/sits.html</p>
+                    </div>
+                    <div class="bookmarks">
+                        <a href="https://github.com/JGroves1" aria-label="Github profile"><img src="/images/bookmark-github.png" alt="Github favicon in blurple"></a>
+                        <a href="https://codepen.io/JGroves1" aria-label="CodePen profile"><img src="/images/bookmark-codepen.png" alt="CodePen favicon in black"></a>
+                        <a href="https://www.behance.net/janessagroves" aria-label="behance profile"><img src="/images/bookmark-behance.png" alt="Behance favicon in blue"></a>
+                        <a href="mailto:jgroves1@asu.edu" aria-label="email me"><img src="/images/bookmark-gmail.png" alt="Gmail favicon in brand colors"></a>
+                    </div>
+                </div>
+
+                <!-- begin process tab -->
+                <div class="browserWindow activeWindow" id="processWindow" >
+                    <h2 class="sr-only">About My Process</h2>
+                    <!-- insert process page here -->
+                </div>
+
+                <!-- begin fits tab -->
+                <div class="browserWindow" id="fitsWindow">
+                    <h2 class="sr-only">SITS Explained</h2>
+                    <!-- insert FITS page here -->
+                </div>
+
+                <!-- begin sits tab -->
+                <div class="browserWindow" id="sitsWindow">
+                    <h2 class="sr-only">FITS Explained</h2>
+                    <!-- insert SITS page here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <small>Copyright &copy; 2024 // Janessa Groves</small>
+        </footer>
+    </body>
+</html>

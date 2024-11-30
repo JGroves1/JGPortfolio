@@ -1,0 +1,389 @@
+/* JANESSA GROVES */
+
+/* CSS RESET BY MEYERWEB.COM */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	font-size: 16px;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- VARIABLES ----- */
+:root{
+    /* BRAND COLORS */
+	--ube: #B27CC5;
+	--carbon: #282828;
+	--murado: #651992;
+	--growth: #8FC57C;
+	--mango: #FED65A;
+	--periwinkle: #5A82FE;
+
+	/* DESIGN COLORS */
+	--blk: #000000;
+	--wht: #ffffff;
+	--gray: #CCCCCC;
+	--ltGray: #E5E5E5;
+
+		/* pastel rainbow */
+		--pastelRed: #FAACA7;
+		--pastelOrange: #F5CD9A;
+		--pastelYellow: #F9F1A4;
+		--pastelGreen: #B3F5A9;
+		--pastelBlue: #B1CBF5;
+		/* purple in rainbow is ube */
+		--pastelPink: #F09CD6;
+
+		/* myspace parody */
+		--msDkBlue: #154799;
+		--msMedBlue: #99C0FF;
+		--msLtBlue: #D7E4F9;
+		--msLtOrange: #EFD8BA;
+		/* dark orange is same as rainbow */
+
+    /* FONTS */
+	--aleo: "Aleo", serif;
+	--arial: Arial, Helvetica, sans-serif;
+	--inter: "Inter", sans-serif;
+	--jbMono: "JetBrains Mono", monospace;
+	--meow: "Meow Script", cursive;
+	--mont: "Montserrat", sans-serif;
+	--ver: Verdana, sans-serif;	
+}
+
+/* ----- BODY/GLOBAL -----  */
+body {
+	background: var(--ube);
+	background: linear-gradient(90deg, var(--pastelRed) 0%, var(--pastelOrange) 16%, var(--pastelYellow) 33%, var(--pastelGreen) 50%, var(--pastelBlue) 66%, var(--ube) 82%, var(--pastelPink) 100%);
+}
+
+/* ----- TYPOGRAPHY -----  */
+nav, .urlBar {
+	font-family: var(--inter);
+}
+
+#speechBubble h3 {
+	font-family: var(--meow);
+	font-size: 72px;
+}
+
+footer, #speechBubble p {
+	font-family: var(--jbMono);
+	line-height: 1.5;
+}
+
+small {
+	font-size: 0.75em;
+}
+
+/* ----- POSITIONING MAIN ELEMENTS ON THE PAGE ----- */
+body {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	height: 100vh;
+}
+
+header {
+	justify-self: right;
+}
+
+footer {
+	width: 100%;
+}
+
+/* ----- SKIP LINK ----- */
+.skip-link {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.skip-link:focus {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+/* ----- HEADER ----- */
+    /* ----- NAV ----- */
+	.mainNav {
+		float: left;
+		text-align: center;
+	}
+
+	.mainNav li {
+		margin: 1rem;
+	}
+
+	nav a {
+		text-decoration: none;
+		color: var(--wht);
+	}
+
+	nav a:visited {
+		color: var(--wht);
+	}
+
+	.desktopIcons {
+		height: 50px;
+	}
+
+	.mainNav ul li p {
+		text-shadow: var(--blk) 0 0 3px;
+	}
+
+/* ----- MAIN ----- */
+.fauxBrowser {
+	width: 1020px;
+	height: 700px;
+	background-color: var(--gray);
+	border-radius: 10px;
+}
+
+.windowControls {
+	display: inline-flex;
+	font-family: var(--inter);
+	float: right;
+	margin: 5px 5px auto auto;
+}
+
+.windowControls svg {
+	padding: 3px;
+	align-self: center;
+	float: right;
+}
+
+.windowControls svg:hover {
+	background-color: var(--ltGray);
+	cursor: pointer;
+	border-radius: 2.5px;
+}
+
+.windowControls svg:last-of-type:hover {
+	background-color: var(--pastelRed);
+}
+
+.tabs {
+	display: flex;
+	margin-left: 5px;
+}
+
+.tabs li {
+	width: 170px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	background-color: var(--ltGray);
+	border-radius: 30px 30px 0 0;
+	clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+	padding: 3px;
+	margin-right: -15px;
+	margin-top: 15px;
+	padding-left: 20px;
+}
+
+.tabs li:hover {
+	cursor: pointer;
+	background-color: var(--gray);
+}
+
+#activeTab {
+	background-color: var(--wht);
+	z-index: 1;
+}
+
+.tabs li svg {
+	margin-right: 3px;
+}
+
+.tabs li:last-of-type {
+	width: 28px;
+	clip-path: circle(14px at center);
+	padding-left: 10px;
+	margin-left: 15px;
+}
+
+.addTab svg {
+	padding-left: 1px;
+}
+
+.browserWindow {
+	display: none;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+	border-radius: 0 0 10px 10px;
+}
+
+.activeWindow {
+	display: block;
+}
+
+.browserBar {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 14px 14px 5px;
+	background-color: var(--wht);
+}
+
+.browserBar svg {
+	padding: 2.5px;
+	margin: 2.5px;
+	border-radius: 90px;;
+}
+
+.urlBar {
+	width: 800px;
+	height: 30px;
+	border-radius: 90px;
+	background-color: var(--ltGray);
+}
+
+.urlBar p {
+	display: none;
+	color: var(--carbon);
+	margin-top: 7px;
+	margin-left: 15px;
+}
+
+#activeURL {
+	display: block;
+}
+
+.bookmarks img {
+	width: 18px;
+	padding: 5px;
+	margin-top: 5px;
+	border-radius: 90px;
+}
+
+.browserBar svg:hover, .bookmarks img:hover {
+	background-color: var(--gray);
+	cursor: pointer;
+}
+
+
+	/* ----- HOME ----- */
+		/* ----- Welcome Tab ----- */
+		#welcomeWindow {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-content: center;
+			height: 559px;
+			background-color: var(--carbon);
+		}
+
+		#speechBubble {
+			color: var(--wht);
+			background-color: var(--ube);
+			border-radius: 35px;
+			margin: auto 40px;
+			width: 486px;
+			position: relative;
+		}
+
+		#speechBubble:after {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 50px solid var(--ube);
+			border-right: 50px solid transparent;
+			border-top: 25px solid transparent;
+			border-bottom: 25px solid transparent; 
+			left: 486px;
+			top: 150px;
+		}
+
+		#speechBubble h3 {
+			padding: 10px;
+		}
+
+		#speechBubble p {
+			padding: 10px 25px 25px;
+		}
+
+		#speechBubble a, #speechBubble a:visited {
+			color: var(--wht);
+		}
+
+		#homeSelfie {
+			width: 350px;
+			justify-self: center;
+			align-self: center;
+		}
+
+/* ----- FOOTER ----- */
+footer {
+	text-align: center;
+}
+
+/* ----- ADDITIONAL CLASSES ----- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+/* ----- ADDITIONAL IDS ----- */
+
+/* ----- MEDIA QUERIES GO HERE; I'M GOING TO MAKE THIS RESPONSIVE AT A LATER TIME ----- */
