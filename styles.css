@@ -85,6 +85,7 @@ table {
 		/* myspace parody */
 		--msDkBlue: #154799;
 		--msMedBlue: #99C0FF;
+		--msBrightBlue:#2C72E2;
 		--msLtBlue: #D7E4F9;
 		--msLtOrange: #EFD8BA;
 		/* dark orange is same as rainbow */
@@ -117,6 +118,11 @@ nav, .urlBar {
 
 footer, #speechBubble p {
 	font-family: var(--jbMono);
+	line-height: 1.5;
+}
+
+#aboutWindow {
+	font-family: var(--ver);
 	line-height: 1.5;
 }
 
@@ -187,15 +193,18 @@ footer {
 	}
 
 	.mainNav ul li p {
-		text-shadow: var(--blk) 0 0 3px;
+		text-shadow: 1px 1px 3px var(--blk);
 	}
 
 /* ----- MAIN ----- */
 .fauxBrowser {
 	width: 1020px;
 	height: 700px;
+	overflow-y: hidden;
+	overflow-x: hidden;
 	background-color: var(--gray);
 	border-radius: 10px;
+	filter: drop-shadow(0 0 3px var(--carbon));
 }
 
 .windowControls {
@@ -237,6 +246,7 @@ footer {
 	padding: 3px;
 	margin-right: -15px;
 	margin-top: 15px;
+	margin-bottom: -1px;
 	padding-left: 20px;
 }
 
@@ -247,7 +257,7 @@ footer {
 
 #activeTab {
 	background-color: var(--wht);
-	z-index: 1;
+	z-index: 5;	
 }
 
 .tabs li svg {
@@ -267,6 +277,8 @@ footer {
 
 .browserWindow {
 	display: none;
+	height: 560px;
+	width: 1020px;
 	overflow-x: hidden;
 	overflow-y: auto;
 	scroll-behavior: smooth;
@@ -284,6 +296,7 @@ footer {
 	align-items: center;
 	padding: 14px 14px 5px;
 	background-color: var(--wht);
+	filter: drop-shadow(0 1px 3px var(--carbon));
 }
 
 .browserBar svg {
@@ -321,7 +334,6 @@ footer {
 	background-color: var(--gray);
 	cursor: pointer;
 }
-
 
 	/* ----- HOME ----- */
 		/* ----- Welcome Tab ----- */
@@ -370,6 +382,159 @@ footer {
 			width: 350px;
 			justify-self: center;
 			align-self: center;
+		}
+
+		/* ----- About Tab ----- */
+		#aboutWindow {
+			grid-template-columns: 325px 580px;
+			grid-template-rows: repeat(100, 10px);
+			column-gap: 40px;
+			justify-content: center;
+			padding-top: 20px;
+			background-color: var(--wht);
+		}
+
+		#aboutWindow h4 {
+			font-weight: bold;
+			padding: 3px;
+		}
+
+		.blueCol {
+			grid-column: 1 / 1;
+		}
+
+		.orangeCol {
+			grid-column: 2 / -1;
+		}
+
+		.blueCol h4 {
+			background-color: var(--msBrightBlue);
+			color: var(--wht);
+		}
+
+		.orangeCol h4 {
+			background-color: var(--pastelOrange);
+			color: var(--blk);
+		}
+
+			/* placing everything where it needs to go in the grid... why did I do this */
+			.profile {
+				grid-row: 1 / 25;
+			}
+
+			.contact {
+				grid-row: 27 / 38;
+				border: 2px solid var(--msBrightBlue);
+			}
+
+			.interests {
+				grid-row: 41 / 88;
+				border: 2px solid var(--msBrightBlue);
+			}
+
+			.about {
+				grid-row: 4 / 32;
+			}
+
+			.top8 {
+				grid-row: 37 / 71;
+			}
+
+			.comments {
+				grid-row: 75 / -1;
+			}
+
+		.profile h3 {
+			font-size: 1.25em;
+			font-weight: bold;
+		}
+
+		.profile img {
+			width: 200px;
+			float: left;
+			margin-right: 10px;
+		}
+
+		.profile ul {
+			margin: 30px 0;
+		}
+
+		#aboutWindow p, #aboutWindow li, #aboutWindow table {
+			font-size: 0.75em;
+		}
+
+		.contact li, .contact a, .contact a:visited, .top8 li {
+			font-weight: bold;
+			color: var(--msBrightBlue);
+		}
+
+		.contact ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 10px;
+			padding: 10px;
+		}
+
+		.contact li {
+			display: flex;
+		}
+
+		.contact li:hover {
+			text-decoration: underline;
+		}
+
+		.contact a {
+			align-self: center;
+			text-decoration: none;
+		}
+
+		.top8 ol {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			row-gap: 10px;
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		.top8 img {
+			width: 122px;
+		}
+
+		.interests table, .interests th, .interests td {
+			border: 2px solid var(--wht);
+			color: var(--msDkBlue);
+			font-weight: bold;
+			text-align: left;
+		}
+		
+		.interests th {
+			width: 108px;
+			background-color: var(--msMedBlue);
+			padding: 3px;
+		}
+
+		.interests td {
+			background-color: var(--msLtBlue);
+		}
+
+		.comments table {
+			margin-top: 10px;
+		}
+
+		.comments table, .comments th, .comments td {
+			border: 2px solid var(--wht);
+		}
+
+		.comments th {
+			width: 150px;
+			background-color: var(--pastelOrange);
+			font-weight: bold;
+		}
+
+		.comments td {
+			width: 428px;
+			background-color: var(--msLtOrange);
+			padding: 10px;
 		}
 
 /* ----- FOOTER ----- */
