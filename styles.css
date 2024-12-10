@@ -90,6 +90,12 @@ table {
 		--msLtOrange: #EFD8BA;
 		/* dark orange is same as rainbow */
 
+		/* chatbot colors */
+		/* dark green is growth */
+		--ltGrowth: #D9F5D1;
+		/* dark yellow is mango */
+		--ltMango: #FFF4D2;
+
     /* FONTS */
 	--aleo: "Aleo", serif;
 	--arial: Arial, Helvetica, sans-serif;
@@ -124,6 +130,11 @@ footer, #speechBubble p {
 #aboutWindow {
 	font-family: var(--ver);
 	line-height: 1.5;
+}
+
+#chatWindow {
+	font-family: var(--mont);
+	line-height: 1.25;
 }
 
 small {
@@ -488,18 +499,6 @@ footer {
 			text-decoration: none;
 		}
 
-		.top8 ol {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			row-gap: 10px;
-			text-align: center;
-			margin-top: 10px;
-		}
-
-		.top8 img {
-			width: 122px;
-		}
-
 		.interests table, .interests th, .interests td {
 			border: 2px solid var(--wht);
 			color: var(--msDkBlue);
@@ -515,6 +514,22 @@ footer {
 
 		.interests td {
 			background-color: var(--msLtBlue);
+		}
+
+		.about p {
+			margin-bottom: 1em;
+		}
+
+		.top8 ol {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			row-gap: 10px;
+			text-align: center;
+			margin-top: 10px;
+		}
+
+		.top8 img {
+			width: 122px;
 		}
 
 		.comments table {
@@ -535,6 +550,181 @@ footer {
 			width: 428px;
 			background-color: var(--msLtOrange);
 			padding: 10px;
+		}
+
+		/* ----- Chatbot / Jay Tab ----- */
+		#chatWindow {
+			background-color: var(--ltGray);
+		}
+
+		#chatWindow h3 {
+			text-align: center;
+			align-self: end;
+			font-size: 1.75em;
+			font-weight: bold;
+		}
+
+		.chatWrapper {
+			overflow: hidden;
+			border-radius: 35px;
+			margin: auto;
+			width: 392px;
+		}
+
+		.chatContainer {
+			background: var(--wht);
+			border: 1px solid var(--gray);
+			border-radius: 35px 35px 0 0;
+			padding: 20px;
+			height: 350px;
+			width: 350px;
+			overflow-y: auto;
+		}
+
+		.messageWrapper {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			margin-bottom: 15px;
+		}
+
+		.message {
+			padding: 10px 15px;
+			display: inline-block;
+		}
+
+		.botWrapper {
+			margin-right: 20px;
+		}
+
+		.userWrapper {
+			margin-left: 20px;
+			flex-direction: row-reverse;
+		}
+
+		.botMessage {
+			background-color: var(--ltMango);
+			border-radius: 15px 15px 15px 0;
+		}
+
+		.userMessage {
+			background-color: var(--ltGrowth);
+			border-radius: 15px 15px 0 15px;
+		}
+
+		.avatar {
+			width: 35px;
+			height: 35px;
+			border-radius: 90px;
+			background-color: var(--mango);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-self: end;
+			font-weight: bold;
+			flex-shrink: 0;
+		}
+
+		.userAvatar {
+			background-color: var(--growth);
+		}
+
+		.inputContainer {
+			display: flex;
+			padding: 20px;
+			background-color: var(--gray);
+			width: 350px;
+			margin: auto;
+			border-radius: 0 0 35px 35px;
+		}
+
+		input[type="text"] {
+			flex: 1;
+			padding: 10px;
+			border-radius: 10px 0 0 10px;
+		}
+
+		#sendMsg {
+			padding: 10px 20px;
+			background-color: var(--carbon);
+			color: var(--wht);
+			font-weight: bold;
+			border-radius: 0 10px 10px 0;
+			cursor: pointer;
+		}
+
+		#sendMsg:hover {
+			background-color: var(--growth);
+		}
+
+		.typingIndicator, .userTyping {
+			display: flex;
+			gap: 5px;
+			padding: 12px 15px;
+			border-radius: 15px;
+			margin-bottom: 15px;
+			width: fit-content;
+		}
+
+		.typingIndicator {
+			background-color: var(--ltMango);
+		}
+
+		.userTyping {
+			background-color: var(--ltGrowth);
+			margin-left: auto;
+		}
+
+		.typingDot, .userTypingDot {
+			width: 8px;
+			height: 8px;
+			border-radius: 90px;
+			opacity: 0.5;
+			animation: typingDot 1.4s infinite;
+		}
+
+		.typingDot {
+			background: var(--mango);
+		}
+
+		.userTypingDot {
+			background: var(--growth);
+		}
+
+		.typingDot:nth-child(2), .userTypingDot:nth-child(2) { 
+			animation-delay: 0.2s; 
+		}
+
+		.typingDot:nth-child(3), .userTypingDot:nth-child(3) { 
+			animation-delay: 0.4s; 
+		}
+
+		@keyframes typingDot {
+  			0%, 100% { 
+				opacity: 0.4; 
+				transform: scale(1); 
+			}
+
+  			50% { 
+				opacity: 1; 
+				transform: scale(1.2); 
+			}
+		}
+
+		.messageContainer {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.timestamp {
+			font-size: 0.65em;
+			color: var(--carbon);
+			margin-top: 4px;
+			margin-bottom: -2px;
+		}
+
+		.userWrapper .timestamp {
+			text-align: right;
 		}
 
 /* ----- FOOTER ----- */
