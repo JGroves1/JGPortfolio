@@ -132,7 +132,7 @@ footer, #speechBubble p {
 	line-height: 1.5;
 }
 
-#chatWindow {
+#chatWindow, .blogNav, .blogStyle h4, .projectDate, .blogStyle h5 {
 	font-family: var(--mont);
 	line-height: 1.25;
 }
@@ -140,6 +140,14 @@ footer, #speechBubble p {
 #processWindow, #fitsWindow, #sitsWindow {
 	font-family: var(--arial);
 	line-height: 1.5;
+}
+
+.fauxHeader h3, .blogStyle p {
+	font-family: var(--aleo);
+}
+
+.fauxHeader h6 {
+	font-family: var(--meow);
 }
 
 small {
@@ -873,6 +881,12 @@ footer {
 		}
 
 	/* ----- PROJECTS ----- */
+	#UE-Window, #PM-Window, #MA-Window, #BN-Window, #CSD-Window {
+		background-color: var(--wht);
+	}
+
+	
+
 		/* ----- Unique Emporium Tab ----- */
 		/* ----- Poke Mart Tab ----- */
 		/* ----- Migraine App Tab ----- */
