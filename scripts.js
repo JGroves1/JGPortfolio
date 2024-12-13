@@ -67,6 +67,16 @@ function showTab() {
     };
 };
 
+function lastLogin() {
+    const lastLogin = document.getElementById("lastLogin");
+    const today = new Date();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+    let year = today.getFullYear();
+    let loginDate = `${month}-${day}-${year}`;
+    lastLogin.innerHTML = `${loginDate}`;
+};
+
 // contact / chatbot AKA Jay
 function helloJay(){ 
     // a place to store everything
@@ -463,4 +473,5 @@ function helloJay(){
 // call functions on DOM load
 document.addEventListener("DOMContentLoaded", function () {
     showTab();
+    lastLogin();
 });

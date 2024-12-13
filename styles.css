@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	line-height: 1;
+	line-height: 1.5;
 	font-size: 16px;
 }
 
@@ -108,8 +108,7 @@ table {
 
 /* ----- BODY/GLOBAL -----  */
 body {
-	background: var(--ube);
-	background: linear-gradient(90deg, var(--pastelRed) 0%, var(--pastelOrange) 16%, var(--pastelYellow) 33%, var(--pastelGreen) 50%, var(--pastelBlue) 66%, var(--ube) 82%, var(--pastelPink) 100%);
+	background-color: var(--carbon);
 }
 
 /* ----- TYPOGRAPHY -----  */
@@ -125,27 +124,22 @@ nav, .urlBar {
 
 footer, #speechBubble p {
 	font-family: var(--jbMono);
-	line-height: 1.5;
 }
 
 #aboutWindow {
 	font-family: var(--ver);
-	line-height: 1.5;
 }
 
 #chatWindow, .blogNav, .blogStyle h4, .projectDate, .blogStyle h5 {
 	font-family: var(--mont);
-	line-height: 1.25;
 }
 
 #processWindow, #fitsWindow, #sitsWindow {
 	font-family: var(--arial);
-	line-height: 1.5;
 }
 
 .fauxHeader h3, .blogStyle p {
 	font-family: var(--aleo);
-	line-height: 1.25;
 }
 
 .fauxHeader h6, .blogStyle p.checkItOut {
@@ -230,7 +224,7 @@ footer {
 	overflow-x: hidden;
 	background-color: var(--gray);
 	border-radius: 10px;
-	filter: drop-shadow(0 0 3px var(--carbon));
+	filter: drop-shadow(0 0 3px var(--gray));
 }
 
 .windowControls {
@@ -341,7 +335,7 @@ footer {
 .urlBar p {
 	display: none;
 	color: var(--carbon);
-	margin-top: 7px;
+	margin-top: 3px;
 	margin-left: 15px;
 }
 
@@ -366,13 +360,13 @@ footer {
 		#welcomeWindow {
 			grid-template-columns: 1fr 1fr;
 			align-content: center;
-			height: 559px;
-			background-color: var(--carbon);
+			height: 570px;
+			background: linear-gradient(90deg, var(--pastelRed) 0%, var(--pastelOrange) 16%, var(--pastelYellow) 33%, var(--pastelGreen) 50%, var(--pastelBlue) 66%, var(--ube) 82%, var(--pastelPink) 100%);
 		}
 
 		#speechBubble {
 			color: var(--wht);
-			background-color: var(--ube);
+			background-color: var(--carbon);
 			border-radius: 35px;
 			margin: auto 40px;
 			width: 486px;
@@ -384,7 +378,7 @@ footer {
 			width: 0px;
 			height: 0px;
 			position: absolute;
-			border-left: 50px solid var(--ube);
+			border-left: 50px solid var(--carbon);
 			border-right: 50px solid transparent;
 			border-top: 25px solid transparent;
 			border-bottom: 25px solid transparent; 
@@ -829,24 +823,24 @@ footer {
 				grid-row: 3 / 9;
 			}
 
-			#processWindow aside dl {
+			#processWindow aside dl, #fitsWindow aside dl, #sitsWindow aside dl {
 				display: grid;
 				grid-template-columns: 1fr 3fr;
 			}
 
-			#processWindow aside dt, #processWindow aside dd {
+			#processWindow aside dt, #processWindow aside dd, #fitsWindow aside dt, #fitsWindow aside dd, #sitsWindow aside dt, #sitsWindow aside dd {
 				grid-column: 2;
 			}
 
-			#processWindow aside dt {
+			#processWindow aside dt, #fitsWindow aside dt, #sitsWindow aside dt {
 				font-weight: bold;
 			}
 
-			#processWindow aside dd {
+			#processWindow aside dd, #fitsWindow aside dd, #sitsWindow aside dd {
 				font-size: 0.75em;
 			}
 
-			#processWindow aside dd, .miniHexes {
+			#processWindow aside dd, #fitsWindow aside dd, #sitsWindow aside dd, .miniHexes {
 				margin-bottom: 12px;
 			}
 
@@ -858,6 +852,11 @@ footer {
 				grid-column: 1;
 				grid-row: span 2;
 				align-self: center;
+			}
+
+			#fitsWindow aside, #sitsWindow aside {
+				grid-column: 3;
+				grid-row: 4 / 9;
 			}
 
 		/* ----- FITS Tab + SITS Tab ----- */
@@ -1063,6 +1062,7 @@ footer {
 /* ----- FOOTER ----- */
 footer {
 	text-align: center;
+	color: var(--wht);
 }
 
 /* ----- ADDITIONAL CLASSES ----- */
@@ -1086,6 +1086,7 @@ footer {
 
 	.responsiveMsg {
 		display: block;
+		color: var(--wht);
 	}
 
 	.responsiveMsg h3 {
@@ -1100,6 +1101,6 @@ footer {
 	}
 
 	.responsiveMsg a {
-		color: var(--blk);
+		color: var(--ube);
 	}
 }
