@@ -144,6 +144,7 @@ footer, #speechBubble p {
 
 .fauxHeader h3, .blogStyle p {
 	font-family: var(--aleo);
+	line-height: 1.25;
 }
 
 .fauxHeader h6 {
@@ -885,7 +886,151 @@ footer {
 		background-color: var(--wht);
 	}
 
-	
+	.blogStyle {
+		display: grid;
+		grid-template-columns: 550px 200px;
+		column-gap: 50px;
+		margin: auto;
+	}
+
+	.fauxHeader {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 800px;
+		margin: 30px auto 20px;
+	}
+
+	.fauxHeader h3 {
+		font-size: 3.5em;
+		text-transform: lowercase;
+	}
+
+	.fauxHeader img {
+		width: 50px;
+		height: 57.5px;
+		padding: 0 10px;
+	}
+
+	.fauxHeader h6 {
+		font-size: 2.25em;
+		text-align: center;
+		width: 800px;
+	}
+
+	.blogNav ul {
+		flex-grow: 4;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 800px;
+		text-transform: uppercase;
+		font-weight: bold;
+		border-bottom: 2px solid var(--blk);
+		border-top: 2px solid var(--blk);
+		margin-top: 25px;
+	}
+
+	.blogNav ul li {
+		padding: 5px 40px;
+		font-size: 0.85em;
+	}
+
+	.blogStyle h4, .blogStyle h5 {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.blogStyle time {
+		text-transform: uppercase;
+		font-size: 0.85em;
+		margin: 5px 0;
+	}
+
+	.projectArticle {
+		grid-column: 1;
+		display: grid;
+	}
+
+	.projectArticle h4 {
+		font-size: 1.75em;
+	}
+
+	.projectArticle p {
+		margin-bottom: 20px;
+	}
+
+	/* ----- project image slideshow -----  */
+		.imgSlideshow {
+			position: relative;
+			grid-column: 1;
+			height: 400px;
+		}
+
+		.slide {
+			visibility: hidden;
+			overflow: hidden;
+			margin: auto;
+			position: absolute;
+			width: 550px;
+		}
+
+		.slide.active {
+			visibility: visible;
+		}
+
+		.slideshowDots {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.dots {
+			display: inline-block;
+			height: 20px;
+			width: 20px;
+			border-radius: 90px;
+			background-color: var(--gray);
+			margin: 5px 5px -20px;
+			cursor: pointer;
+		}
+
+		.dots.active {
+			background-color: var(--ube);
+		}
+
+		/* project details aside */
+		.projectDeets {
+			grid-column: 2;
+			border: 2.5px solid var(--blk);
+			margin-top: 100px;
+			height: fit-content;
+		}
+
+		.projectDeets img {
+			width: 145px;
+			border: 10px solid var(--wht);
+			background-color: var(--wht);
+			border-radius: 90px;
+			margin-top: -84px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.projectDeets h4 {
+			font-size:1.25em;
+		}
+
+		.projectDeets h5 {
+			font-size: 0.85em;
+			margin-top: 10px;
+		}
+
+		.projectDeets p {
+			font-size: 0.8em;
+		}
 
 		/* ----- Unique Emporium Tab ----- */
 		/* ----- Poke Mart Tab ----- */

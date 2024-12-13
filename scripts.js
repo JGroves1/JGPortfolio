@@ -5,6 +5,7 @@ function showTab() {
     const tabs = document.querySelectorAll(".tabs > li");
     const URLs = document.querySelectorAll(".urlBar > p");
     const windows = document.querySelectorAll(".browserWindow");
+    const chatTab = document.querySelector("#chatWindow");
     
     // just verifying they're there
     console.log(tabs);
@@ -36,15 +37,14 @@ function showTab() {
         };
 
         displayTab(activeTab);
-        
+       imgSlideshow();
 
-       
-        
         // now if the user clicks we want to switch 
         tabs.forEach((tab, i) => {
             tab.addEventListener("click", () => {
                 displayTab(i);
-                if (tab === tabs[2]) {
+                imgSlideshow();
+                if (chatTab && chatTab.classList.contains("activeWindow")) {
                     helloJay();
                 };
             });
@@ -379,6 +379,79 @@ function helloJay(){
         addMessage("Hello! I'm Jay. Janessa made me to take messages. What is your name?", "bot");
 
         console.log("inside helloJay");
+    };
+
+    // project image slideshow
+    function imgSlideshow() {
+        // acquire elements{
+        const currWindow = document.querySelector(".activeWindow");
+        const slides = currWindow.querySelectorAll(".slide");
+        const dots = currWindow.querySelector(".slideshowDots"); 
+        
+        // check for slides
+        if (slides.length > 0) {
+            let activeSlide = 0;
+            let slideInterval;
+
+            // add a dot for every image          
+                dots.innerHTML = "";
+
+                for (let i = 0; i < slides.length; ++i) {
+                    const newDot = document.createElement("span");
+                    newDot.classList.add("dots");
+                    dots.appendChild(newDot);
+                };
+
+                const allDots = currWindow.querySelectorAll(".dots");
+                allDots[0].classList.add("active");
+                console.log(allDots);
+
+            // functions
+                function currSlide(n) {
+                    slides.forEach(slide => {
+                        slide.classList.remove("active");
+                    });
+
+                    allDots.forEach(dot => {
+                        dot.classList.remove("active");
+                    });
+
+                    slides[n].classList.add("active");
+                    allDots[n].classList.add("active");
+                };
+
+                function nextSlide() {
+                    activeSlide++;
+
+                    if (activeSlide >= slides.length) {
+                        activeSlide = 0;
+                    };  
+
+                    currSlide(activeSlide);
+                };
+
+                // reseting interval 
+                function resetInterval() {
+                    if (slideInterval) {
+                        clearInterval(slideInterval);
+                    };
+
+                    slideInterval = setInterval(nextSlide, 5500);
+                };
+
+                // start the intervals
+                resetInterval();
+
+                // make it so user can select dots
+                allDots.forEach((dot, i) => {
+                    dot.addEventListener("click", () => {
+                        activeSlide = i;
+                        currSlide(i);
+                        resetInterval();
+                    });
+                });
+           
+        };
     };
 
 // call functions on DOM load
