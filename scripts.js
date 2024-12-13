@@ -5,12 +5,8 @@ function showTab() {
     const tabs = document.querySelectorAll(".tabs > li");
     const URLs = document.querySelectorAll(".urlBar > p");
     const windows = document.querySelectorAll(".browserWindow");
+    const welcome = document.getElementById("welcomeWindow");
     const chatTab = document.querySelector("#chatWindow");
-    
-    // just verifying they're there
-    console.log(tabs);
-    console.log(URLs);
-    console.log(windows);
 
     // check for tabs & select the first one by default
     if (tabs.length > 0) {
@@ -37,7 +33,11 @@ function showTab() {
         };
 
         displayTab(activeTab);
-       imgSlideshow();
+        imgSlideshow();
+        
+        if (welcome) {
+            tabLinks();
+        };
 
         // now if the user clicks we want to switch 
         tabs.forEach((tab, i) => {
@@ -49,6 +49,21 @@ function showTab() {
                 };
             });
         });
+
+        // hey y'all links
+        function tabLinks(){
+            const aboutLink = document.getElementById("aboutLink");
+            const chatLink = document.getElementById("chatLink");
+
+            aboutLink.addEventListener("click", () => {
+                displayTab(1);
+            });
+
+            chatLink.addEventListener("click", () => {
+                displayTab(2);
+                helloJay();
+            });
+        };
     };
 };
 
@@ -75,14 +90,12 @@ function helloJay(){
         // event listener for the button
         sendBtn.addEventListener("click", () => {
             sendMessage();
-            console.log("inside sendBtn event listener");
         });
 
         // event listener for when the user hits "Enter"
         userInput.addEventListener("keypress", function(e) {
             if (e.key === "Enter") {
             sendMessage();
-            console.log("inside enter key event listener");
             };
         }); 
 
@@ -101,11 +114,11 @@ function helloJay(){
         const phoneRegex = /^\(\d{3}\)\d{3}-\d{4}$/;
 
         function validateEmail(email) {
-            emailRegex.test(email);
+            return emailRegex.test(email);
         };
 
         function validatePhone(phone) {
-            phoneRegex.test(phone);
+            return phoneRegex.test(phone);
         };
 
         // format phone to be readable
@@ -122,7 +135,6 @@ function helloJay(){
 
         // typing dots!
         function showTypingIndicator() {
-            console.log("inside typing indicator");
             // const chatContainer = document.getElementById("chatContainer");
             const wrapperDiv = document.createElement("div");
             wrapperDiv.className = "messageWrapper botWrapper";
@@ -195,7 +207,6 @@ function helloJay(){
 
         // the chat messages have entered the chat lol
         async function addMessage(message, sender, delay = 1000) {
-            console.log("inside addMessage");
             if (sender === "bot") {
                 showTypingIndicator();
                 // artificial 'thinking' time
@@ -265,7 +276,7 @@ function helloJay(){
                             conversationState.step = "contactPreference";
                             addMessage("Would you prefer to chat with her via email or phone?", "bot");
                         } else {
-                            converstation.step = "end";
+                            conversationState.step = "end";
                             addMessage("Okay, have a great day!", "bot");
                         };
                     } else {
@@ -296,7 +307,7 @@ function helloJay(){
                         };
                         conversationState.contactInfo = formatPhone(input);
                     } else {
-                        if(!validateEmail(input)) {
+                        if (!validateEmail(input)) {
                             addMessage("Please enter a valid email address.", "bot");
                             return;
                         };
@@ -360,7 +371,6 @@ function helloJay(){
         };
 
         async function sendMessage() {
-            console.log("inside sendMessage");
             const userMessage = userInput.value.trim();
             // ignore empty messages
             if (!userMessage) return;
@@ -377,8 +387,6 @@ function helloJay(){
     
         // allows the initial message to display when the window loads
         addMessage("Hello! I'm Jay. Janessa made me to take messages. What is your name?", "bot");
-
-        console.log("inside helloJay");
     };
 
     // project image slideshow
@@ -404,7 +412,6 @@ function helloJay(){
 
                 const allDots = currWindow.querySelectorAll(".dots");
                 allDots[0].classList.add("active");
-                console.log(allDots);
 
             // functions
                 function currSlide(n) {
@@ -450,7 +457,6 @@ function helloJay(){
                         resetInterval();
                     });
                 });
-           
         };
     };
 

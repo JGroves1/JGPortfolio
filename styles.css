@@ -113,6 +113,7 @@ body {
 }
 
 /* ----- TYPOGRAPHY -----  */
+	/* this is just general font declarations // additional font properties are in the sections below */
 nav, .urlBar {
 	font-family: var(--inter);
 }
@@ -147,7 +148,7 @@ footer, #speechBubble p {
 	line-height: 1.25;
 }
 
-.fauxHeader h6 {
+.fauxHeader h6, .blogStyle p.checkItOut {
 	font-family: var(--meow);
 }
 
@@ -173,9 +174,9 @@ footer {
 }
 
 /* ----- RESPONSIVEVE MESSAGE UNTIL I CAN CODE DIFF SIZES ----- */
-	.responsiveMsg {
-		display: none;
-	}
+.responsiveMsg {
+	display: none;
+}
 
 /* ----- SKIP LINK ----- */
 .skip-link {
@@ -442,7 +443,7 @@ footer {
 			color: var(--blk);
 		}
 
-			/* placing everything where it needs to go in the grid... why did I do this */
+			/* placing everything where it needs to go in the grid */
 			.profile {
 				grid-row: 1 / 25;
 			}
@@ -783,6 +784,7 @@ footer {
 
 	.newsStyle p {
 		margin-bottom: 10px;
+		font-size: 0.9em;
 	}
 
 	.authorDetails {
@@ -941,6 +943,10 @@ footer {
 		font-weight: bold;
 	}
 
+	.blogStyle h5:first-of-type {
+		margin-top: 40px;
+	}
+
 	.blogStyle time {
 		text-transform: uppercase;
 		font-size: 0.85em;
@@ -992,7 +998,7 @@ footer {
 			width: 20px;
 			border-radius: 90px;
 			background-color: var(--gray);
-			margin: 5px 5px -20px;
+			margin: 5px 5px -30px;
 			cursor: pointer;
 		}
 
@@ -1025,18 +1031,34 @@ footer {
 
 		.projectDeets h5 {
 			font-size: 0.85em;
-			margin-top: 10px;
 		}
 
 		.projectDeets p {
 			font-size: 0.8em;
+			margin-bottom: 10px;
+		}
+		
+		.projectDeets h4, .projectDeets h5, .projectDeets p {
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 
-		/* ----- Unique Emporium Tab ----- */
-		/* ----- Poke Mart Tab ----- */
-		/* ----- Migraine App Tab ----- */
-		/* ----- Barnes & Noble Tab ----- */
-		/* ----- Student Debt Tab ----- */
+		.blogStyle .projectDeets h5 {
+			margin-top: 10px;
+		}
+
+		/* animated gifs */
+		.animatedGIF {
+			height: 500px;
+			margin-bottom: 20px;
+			margin-left: 20px;
+		}
+
+		.blogStyle p.checkItOut {
+			font-size: 2.25em;
+			float: left;
+			margin-top: 75px;
+		}
 
 /* ----- FOOTER ----- */
 footer {
